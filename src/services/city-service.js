@@ -5,7 +5,7 @@ class CityService{
         this.cityRepository=new CityRepository();
     }
 
-    async createCity(name){
+    async createCity({name}){
         try{
         const city=this.cityRepository.createCity({name});
         return city;
@@ -27,7 +27,7 @@ class CityService{
 
     }
 
-    async updateCity(data,cityId){
+    async updateCity({data,cityId}){
         try{
         const city=this.cityRepository.createCity({cityId,data});
         return city;
